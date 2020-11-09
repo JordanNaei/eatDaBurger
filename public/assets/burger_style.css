@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box !important;
+  }
+  
+  body {
+    background-image: url("../img/burgerWP.jpg");
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: auto !important;
+  }
+
+  .heading{
+      color: whitesmoke !important;
+    margin-top: 2% !important;
+  }
+
+  .bCont {
+      margin-top: 150px !important;
+     
+  }
+
+  .backg1 {
+ background-color: rgba(0, 0, 0, 0.7) !important;
+ color: white !important;
+ border-radius: 30px;
+  }
+  .backg2 {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+     }
+
+  .meanBur{
+      border-radius: 50px !important;
+      width: 100px !important;
+      margin: auto !important;
+      padding-top: 10px !important;
+  }
+  
+.addBur{
+    margin: auto !important;
+}
+
+.toBeDevList{
+    padding: 10px;
+}

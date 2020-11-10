@@ -6,7 +6,7 @@
     <title>Eat Da Burger!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Style css -->
-    <link rel="stylesheet" href="./public/assets/burger_style.css" />
+    <link rel="stylesheet" href="./public/assets/css/burger_style.css" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
@@ -31,7 +31,9 @@
 </head>
 
 <body>
-    <h1 class="text-center heading">Eat-Da-Burger</h1>
+    <div class="wrap text-center">
+        <span class="text-center heading fire">Eat-Da-Burger</span>
+        </div>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 bCont">
             <div class="col mb-4 ">
@@ -41,31 +43,23 @@
                             <h5 class="card-title"><b>Burger Waiting to Be Devoured!</b></h5>
                         </div>
                         <div class="">
-                            <form action="" method="" class="toBeDevList"> Cheese Burger
+                            
+                            <form action="" method="" class="toBeDevList text-left"> Cheese Burger
                                 <button type="submit" class="btn btn-outline-success pull-right" id="">DEVOUR
                                     IT!</button>
                             </form>
-                            <form action="" method="" class="toBeDevList"> Cheese Burger
-                                <button type="submit" class="btn btn-outline-success pull-right" id="">DEVOUR
-                                    IT!</button>
-                            </form>
-                            <form action="" method="" class="toBeDevList"> Cheese Burger
-                                <button type="submit" class="btn btn-outline-success pull-right" id="">DEVOUR
-                                    IT!</button>
-                            </form>
-
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col mb-4">
                 <div class="card h-100 backg1">
-                    <img src="/public/img/bittheBurger.jpg" class="card-img-top meanBur" alt="Burger image">
+                    <img src="./public/img/bittheBurger.jpg" class="card-img-top meanBur" alt="Burger image">
                     <div class="card-body text-center">
                         <h5 class="card-title">Enjoy Your Burger of Choice 🍔</h5>
 
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name"
+                            <input type="text" class="form-control" placeholder="Add Burger Name" aria-label="Burger Name"
                                 id="">
                         </div>
                         <div class="input-group-append">
@@ -78,12 +72,8 @@
                 <div class="card h-100 backg2">
                     <div class="card-body text-center">
                         <h5 class="card-title fireBur"><b>Devoured Burgers!</b></h5>
-                        <p class="card-text">1. Cheese</p>
-                        <p class="card-text">1. Cheese</p>
-                        <p class="card-text">1. Cheese</p>
-                        <p class="card-text">1. Cheese</p>
-                        <p class="card-text">1. Cheese</p>
 
+                        <p class="card-text text-left">1. Cheese</p>
                     </div>
                 </div>
             </div>

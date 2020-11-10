@@ -1,4 +1,4 @@
-const connection = require("./connection.js");
+const connection = require("../config/connection.js");
 
 // Helper function for SQL syntax.
 function printQuestionMarks(num) {
@@ -32,7 +32,7 @@ function objToSql(ob) {
 var orm = {
     selectAll: function (table, cb) {
         var query = "SELECT * FROM ??";
-        connection.query(query, [tableInput], function (err, result) {
+        connection.query(query, [table], function (err, result) {
             if (err) throw new Error(err);
             cb(result)
         });
@@ -73,6 +73,21 @@ var orm = {
             cb(result);
         });
     },
+    // Delete a burger from the db.
+    deleteOne: function (table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err
+            }
+            cb(result);
+        });
+    }
 };
 
-module.exports = {orm};
+module.exports = orm;

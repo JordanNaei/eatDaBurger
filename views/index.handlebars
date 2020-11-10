@@ -1,0 +1,58 @@
+<div class="wrap text-center">
+<h1 class="text-center heading">Eat-Da-Burger</h1>
+</div>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 bCont">
+        <div class="col mb-4 ">
+            <div class="card h-100 backg1">
+                <div class="card-body text-center">
+                    <div>
+                        <h5 class="card-title"><b>Burger Waiting to Be Devoured!</b></h5>
+                    </div>
+                    <div class="">
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        <form action="" method="" class="toBeDevList text-left">{{this.id}} - {{this.burger_name}}
+                            <button type="submit" class="btn btn-outline-success pull-right devourBur"
+                                data-id="{{this.id}}" data-isDevoured="{{this.devoured}}">DEVOUR IT!</button>
+                        </form>
+                        {{/unless}}
+                        {{/each}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card h-100 backg1">
+                <img src="/img/bittheBurger.jpg" class="card-img-top meanBur" alt="Burger image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Enjoy Your Burger of Choice 🍔</h5>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name"
+                            id="userBurInput">
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-warning addBur" type="button" id="addNewBur">Add a
+                            Burger!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-4">
+            <div class="card h-100 backg2">
+                <div class="card-body text-center">
+                    <h5 class="card-title fireBur"><b>Devoured Burgers!</b></h5>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <form action="" method="" class="toBeDevList text-left">{{this.id}} - {{this.burger_name}}
+                        <button type="submit" class="btn btn-outline-danger pull-right deleteBur" data-id="{{this.id}}">Delete!</button>
+                    </form>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

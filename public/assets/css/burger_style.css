@@ -3,7 +3,7 @@
   }
   
   body {
-    background-image: url("../img/burgerWP.jpg");
+    background-image: url("/img/burgerWP.jpg");
     font-family: 'Hind Vadodara', sans-serif;
     font-size: 16px;
     line-height: 1;

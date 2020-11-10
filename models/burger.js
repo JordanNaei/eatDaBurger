@@ -19,8 +19,14 @@ var burger = {
             cb(res);
         });
     },
+    // Delete Burger
+    deleteOne: function(condition, cb) {
+        orm.deleteOne("burgers", condition, function(res) {
+            cb(res);
+        });
+    }
 
 };
 
 // Export the module to be used 
-module.exports = {burger};
+module.exports = burger;

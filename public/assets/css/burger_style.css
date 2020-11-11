@@ -22,11 +22,50 @@
     overflow: auto !important;
   }
 
-  .heading{
-      color: whitesmoke !important;
-    margin-top: 2% !important;
-  }
+  
+  /* .wrappi{
+    width: 100%;
+    margin: 0;
+    font-family: Arial;
+    font-size: 84px;
+} */
+.heading{
+  padding: 30px !important;
+  font-family: 'Architects Daughter', cursive !important ;
+}
+.titl1{
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255,0.2);
+  background: url("/img/flames.jpg") repeat-x;
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  background-size: contain;
+  /* animation:fire 1s linear infinite; */
+}
 
+.titl{
+  font-weight: 900 !important;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255,0.2);
+    background: url("/img/flames.jpg") repeat-x;
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    background-size: contain;
+    animation:fire 0.6s linear infinite;
+}
+@keyframes fire{
+    /* 0%{
+        background-position: left 0 top 20px;
+    } */
+    50%{
+        background-position: left 10px top 5px;
+    }
+    100%{
+        background-position: left -10px top 0px;
+    }
+}
   .bCont {
       margin-top: 150px !important;
      
@@ -55,4 +94,12 @@
 
 .toBeDevList{
     padding: 10px;
+}
+
+.dBurg{
+  color: #21bf73 !important;
+}
+
+.fireBur{
+  color:#ec524b !important;
 }

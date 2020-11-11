@@ -1,18 +1,16 @@
-<div class="wrap text-center">
-<h1 class="text-center heading">Eat-Da-Burger</h1>
-</div>
 <div class="container">
+    <h1 class="text-center heading titl1">Eat-Da-Burger</h1>
     <div class="row row-cols-1 row-cols-md-3 bCont">
         <div class="col mb-4 ">
             <div class="card h-100 backg1">
                 <div class="card-body text-center">
                     <div>
-                        <h5 class="card-title"><b>Burger Waiting to Be Devoured!</b></h5>
+                        <h5 class="card-title dBurg"><b>Burger Waiting to Be Devoured!</b></h5>
                     </div>
                     <div class="">
                         {{#each burgers}}
                         {{#unless devoured}}
-                        <form action="" method="" class="toBeDevList text-left">{{this.id}} - {{this.burger_name}}
+                        <form action="" method="" class="toBeDevList text-left">{{this.burger_name}}
                             <button type="submit" class="btn btn-outline-success pull-right devourBur"
                                 data-id="{{this.id}}" data-isDevoured="{{this.devoured}}">DEVOUR IT!</button>
                         </form>
@@ -27,10 +25,11 @@
             <div class="card h-100 backg1">
                 <img src="/img/bittheBurger.jpg" class="card-img-top meanBur" alt="Burger image">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Enjoy Your Burger of Choice 🍔</h5>
-
+                    <div>
+                        <h6 class="card-title titl">Enjoy Your Burger of Choice!</h6>
+                    </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Burger Name" aria-label="Burger Name"
+                        <input type="text" class="form-control" placeholder="Add Burger Name" aria-label="Burger Name"
                             id="userBurInput">
                     </div>
                     <div class="input-group-append">
@@ -46,8 +45,9 @@
                     <h5 class="card-title fireBur"><b>Devoured Burgers!</b></h5>
                     {{#each burgers}}
                     {{#if devoured}}
-                    <form action="" method="" class="toBeDevList text-left">{{this.id}} - {{this.burger_name}}
-                        <button type="submit" class="btn btn-outline-danger pull-right deleteBur" data-id="{{this.id}}">Delete!</button>
+                    <form action="" method="" class="toBeDevList text-left">{{this.burger_name}}
+                        <button type="submit" class="btn btn-outline-danger pull-right deleteBur"
+                            data-id="{{this.id}}">Delete!</button>
                     </form>
                     {{/if}}
                     {{/each}}

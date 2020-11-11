@@ -4,22 +4,28 @@ $(function () {
     // Add a new burger.
     $("#addNewBur").on("click", function (event) {
         event.preventDefault();
+        const burgerUserInput = $("#userBurInput").val().trim();
+        if (burgerUserInput === '') {
+            alert("Please enter a valid burger number")
+        } else {
+            var newBurObj = {
+                burger_name: $("#userBurInput").val().trim(),
+                devoured: 0
+            };
 
-        var newBurObj = {
-            burger_name: $("#userBurInput").val().trim(),
-            devoured: 0
-        };
-
-        // Send the POST request.
-        $.ajax("/api/burgers", {
-            type: "POST",
-            data: newBurObj
-        }).then(function () {
-            console.log("Added new burger");
-            // Reload the page to get the updated burger list.
-            location.reload();
-        });
+            // Send the POST request.
+            $.ajax("/api/burgers", {
+                type: "POST",
+                data: newBurObj
+            }).then(function () {
+                console.log("Added new burger");
+                // Reload the page to get the updated burger list.
+                location.reload();
+            });
+        }
     });
+
+
 
     $(".devourBur").on("click", function (event) {
         event.preventDefault();
@@ -39,8 +45,8 @@ $(function () {
         });
     });
 
-// Delete Route 
-    $(".deleteBur").on("click", function(event) {
+    // Delete Route 
+    $(".deleteBur").on("click", function (event) {
         event.preventDefault();
         const id = $(this).data("id");
         $.ajax({
